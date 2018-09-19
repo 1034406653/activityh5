@@ -1,5 +1,5 @@
 body {
-  font-family: PingFangSC-Medium;
+  font-family: PingFangSC-Regular;
 }
 .banner {
   width: 100%;
@@ -99,8 +99,95 @@ body {
   right: 0.4000rem;
   top: 0.3333rem;
   font-size: 0.4267rem;
-  font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #8173c8;
   line-height: 0.5333rem;
+}
+.content .content-main .subBtn {
+  width: 3.2000rem;
+  height: 1.0667rem;
+  background: #5b40eb;
+  border-radius: 0.5333rem;
+  line-height: 1.0667rem;
+  font-size: 0.3733rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 0.6000rem;
+}
+.foot {
+  width: 100%;
+  height: auto;
+}
+.foot .foot_nav {
+  width: 9.6000rem;
+  height: 1.2533rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.foot .foot_nav li {
+  float: left;
+  font-size: 0.3733rem;
+  line-height: 1.0667rem;
+  color: #fff;
+  width: 3.2000rem;
+  height: 1.0667rem;
+  background: url(../img/prize_@2.png);
+  background-size: 100% 100%;
+}
+.foot .foot_nav li.active {
+  float: left;
+  font-size: 0.3733rem;
+  line-height: 1.0667rem;
+  color: #fff;
+  width: 3.2000rem;
+  height: 1.2533rem;
+  background: url(../img/prize_active@2x.png);
+  background-size: 100% 100%;
+  font-weight: 500;
+}
+.foot .foot_nav li:first-child {
+  background: url(../img/prize_@1.png);
+  background-size: 100% 100%;
+}
+.foot .foot_nav li:last-child {
+  background: url(../img/prize_@3.png);
+  background-size: 100% 100%;
+}
+.foot .foot_nav li.active:first-child {
+  background: url(../img/prize_active@1x.png);
+  background-size: 100% 100%;
+}
+.foot .foot_nav li.active:last-child {
+  background: url(../img/prize_active@3x.png);
+  background-size: 100% 100%;
+}
+.foot .foot_main1 {
+  margin: 0.1333rem auto;
+  width: 8.7733rem;
+  height: auto;
+  background: #f5f3ff;
+  box-shadow: 0px 0.0800rem 0.0267rem 0px rgba(91, 64, 235, 0.3), 0px 0px 0.1333rem 0px rgba(91, 64, 235, 0.5);
+  border-radius: 0.1333rem;
+  margin-bottom: 0.6667rem;
+}
+.foot .foot_main2 {
+  margin: 0.1333rem auto;
+  width: 8.7733rem;
+  height: auto;
+  background: #f5f3ff;
+  box-shadow: 0px 0.0800rem 0.0267rem 0px rgba(91, 64, 235, 0.3), 0px 0px 0.1333rem 0px rgba(91, 64, 235, 0.5);
+  border-radius: 0.1333rem;
+  margin-bottom: 0.6667rem;
+  display: none;
+}
+.foot .foot_main3 {
+  margin: 0.1333rem auto;
+  width: 8.7733rem;
+  height: auto;
+  background: #f5f3ff;
+  box-shadow: 0px 0.0800rem 0.0267rem 0px rgba(91, 64, 235, 0.3), 0px 0px 0.1333rem 0px rgba(91, 64, 235, 0.5);
+  border-radius: 0.1333rem;
+  margin-bottom: 0.6667rem;
+  display: none;
 }

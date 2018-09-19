@@ -29,44 +29,49 @@
 					<input type="number" placeholder="财BTC价格" />
 					<span>USDT</span>
 				</div>
-				<div class="subBtn"></div>
+				<div class="subBtn">确定</div>
 			</div>
 		</div>
 		<div class="foot">
 			<ul class="foot_nav">
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
+				<li class="active">活动规则</li>
+				<li>今日预测</li>
+				<li>往期获奖</li>
 			</ul>
 			<div class="foot_main1">
-				规则
+				1
 			</div>
-			<div class="foot-main2">
+			<div class="foot_main2">
 				<ul>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
+					2
 				</ul>
 			</div>
-			<div class="foot-main3">
+			<div class="foot_main3">
 				<ul>
-					<li>a</li>
-					<li>b</li>
-					<li>c</li>
-					<li>d</li>
-					<li>e</li>
-					<li>f</li>
-					<li>g</li>
-					<li>h</li>
-					<li>i</li>
+					3
 				</ul>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.foot_nav li').click(function(){
+					$(this).addClass("active");
+					$(this).siblings("li").removeClass('active');
+					if($(this).index()=="0"){
+						$(".foot_main2").hide()
+						$(".foot_main3").hide()
+						$(".foot_main1").show()
+					}else if($(this).index()=="1"){
+						$(".foot_main1").hide()
+						$(".foot_main3").hide()
+						$(".foot_main2").show()	
+					}else if($(this).index()=="2"){
+						$(".foot_main1").hide()
+						$(".foot_main2").hide()
+						$(".foot_main3").show()
+					}
+				})
+			})
+		</script>
 	</body>
 </html>
