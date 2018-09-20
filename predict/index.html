@@ -10,13 +10,47 @@
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="dist/css/common.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/predict.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/predict_hy.css" /> <!--hanyu made css-->
+		<link rel="stylesheet" type="text/css" href="dist/css/mescroll.css" /> <!--hanyu made css-->
 		<script src="dist/js/flexible.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js?v=1.0.1"></script>
+		<script src="src/js/toastlxl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/parameter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/index_hy.js" type="text/javascript" charset="utf-8"></script> <!--hanyu made js-->
+		<script src="src/js/mescroll.min.js" type="text/javascript" charset="utf-8"></script> <!--hanyu made js-->
 		<title>预测币价</title>
 	</head>
+
 	<body>
-		<div class="banner"></div>
-		<div class="content">
+		<div class="banner">
+			
+		</div>
+		<div class="content1">
+			<div class="topBorder1"></div>
+			<div class="topBorder2"></div>
+			<div class="content-main">
+				<div class="content_title">
+					<span>奖品</span>
+					<b></b>
+				</div>
+					<ul>
+						<li>
+							<div class="prize1"></div>
+							<p>一等奖</p>
+						</li>
+						<li>
+							<div class="prize2"></div>
+							<p>二等奖</p>
+						</li>
+						<li>
+							<div class="prize3"></div>
+							<p>三等奖</p>
+						</li>
+					</ul>
+			</div>
+		</div>
+		<div class="content2">
 			<div class="topBorder1"></div>
 			<div class="topBorder2"></div>
 			<div class="content-main">
@@ -25,11 +59,11 @@
 					<b></b>
 				</div>
 				<div class="input_box">
-
-					<input type="number" placeholder="财BTC价格" />
+					<input type="number" placeholder="0~99999.99" max="99999.99" name="points" />
 					<span>USDT</span>
+					<div class="subBtn">确定</div>
 				</div>
-				<div class="subBtn">确定</div>
+				
 			</div>
 		</div>
 		<div class="foot">
@@ -38,40 +72,195 @@
 				<li>今日预测</li>
 				<li>往期获奖</li>
 			</ul>
-			<div class="foot_main1">
-				1
-			</div>
-			<div class="foot_main2">
+			<div class="foot-main1">
 				<ul>
-					2
+					<li>
+						1. 用户需要先提供钱包、交易所地址参与活动，若地址填写错误，导致奖励未收到，活动方概不负责。
+					</li>
+					<li>
+						2. 竞猜时间为星期一到星期六每天的00:10~20:00。
+					</li>
+					<li>
+						3. 开奖价格以当日24：00火币的BTC/USDT价格为准。按接近开奖价格的绝对值决定获奖者顺序。
+					</li>
+					<li>
+						4. 若有复数中奖者，则瓜分该奖项，下一奖项按下一位接近者计算。
+					</li>
+					<li>
+						5. 押注消耗<span class="reduce_dio"></span>个DIO，每人每天只能押注一次。
+					</li>
+					<li>
+						6. 活动奖励在三个工作日内由工作人员联系中奖者并发放。
+					</li>
+					<li>
+						7. 本活动最终解释权归糖果世纪所有。
+					</li>
 				</ul>
 			</div>
-			<div class="foot_main3">
-				<ul>
-					3
-				</ul>
+			<div class="foot-main2">
+				<div class="foot-main2-title">
+					<p class="foot-main2-user">用户名</p>
+					<p class="foot-main2-predict">预估币价</p>
+				</div>
+				<div id="mescroll-part01" class="mescroll">
+					<ul id="mescroll-dataList01" class="data-list01"></ul>
+				</div>
+			</div>
+			<div class="foot-main3">
+				<div class="foot-main3-title">
+					<p class="foot-main3-date">日期</p>
+					<p class="foot-main3-price">价格</p>
+					<p class="foot-main3-gift">获奖情况</p>
+				</div>
+				<div id="mescroll-part02" class="mescroll">
+					<ul id="mescroll-dataList02" class="data-list02"></ul>
+				</div>
+			</div>
+		
+			<div id="toastBox" class="toastlxl">
+
+			</div>
+			<div id="modalBox">
+
 			</div>
 		</div>
 		<script type="text/javascript">
-			$(function(){
+			$(function() {
+				console.log(window.location.href)
+				/*基础设置*/
+				var baseURL = 'https://a.hzjiazhuo.com/api';
+				var webURL = 'http://web.hzjiazhuo.com/';
+				var loginURL = 'http://web.hzjiazhuo.com/#/acount/login';
+				var coinURL = 'http://web.hzjiazhuo.com/#/center/draw';
+				var toastlxl = new Toastlxl('toastBox');
+				var modallxl = "";
+				var jiazhuoToken = getQueryString('token') || window.localStorage.getItem('jiazhuoToken') || '';
+				window.localStorage.setItem('jiazhuoToken',jiazhuoToken);
+				$.ajax({
+					type: "post",
+					url: baseURL + '/guessing/get_guessing',
+					data: {},
+					async: true,
+					success(res) {
+						if(res.code == 0) {
+							$(".prize1").text(res.data.first_prize)
+							$(".prize2").text(res.data.second_prize)
+							$(".prize3").text(res.data.third_prize)
+							$('.reduce_dio').text(res.data.reduce_dio)
+						}
+					}
+				});
 				$('.foot_nav li').click(function(){
 					$(this).addClass("active");
 					$(this).siblings("li").removeClass('active');
 					if($(this).index()=="0"){
-						$(".foot_main2").hide()
-						$(".foot_main3").hide()
-						$(".foot_main1").show()
+						$(".foot-main2").hide()
+						$(".foot-main3").hide()
+						$(".foot-main1").show()
 					}else if($(this).index()=="1"){
-						$(".foot_main1").hide()
-						$(".foot_main3").hide()
-						$(".foot_main2").show()	
+						$(".foot-main1").hide()
+						$(".foot-main3").hide()
+						$(".foot-main2").show()
 					}else if($(this).index()=="2"){
-						$(".foot_main1").hide()
-						$(".foot_main2").hide()
-						$(".foot_main3").show()
+						$(".foot-main1").hide()
+						$(".foot-main2").hide()
+						$(".foot-main3").show()
 					}
+				})
+				$('.input_box input').change(function() {
+					var priceVal = parseFloat($(this).val()).toFixed(2);
+					if(priceVal > 99999.99) {
+						priceVal = 99999.99
+						toastlxl.show('最大数值为99999.99')
+					} else if(priceVal < 0) {
+						priceVal = 0.99
+						toastlxl.show('最大数值为0.00')
+					}
+					$(this).val(priceVal);
+				})
+				$('.subBtn').click(function() {
+					var priceVal = parseFloat($('.input_box input').val()).toFixed(2);
+					console.log(priceVal);
+					console.log(jiazhuoToken);
+					if(0 < priceVal && priceVal <= 99999.99) {
+						if(jiazhuoToken) {
+							$.ajax({
+								type: "post",
+								url: baseURL + '/guessing/enroll',
+								data: {
+									token: jiazhuoToken,
+									price: priceVal,
+								},
+								async: true,
+								success(res) {
+									console.log(res);
+									if(res.code == 0) {
+										modallxl = new Modal({
+											"eleId": "modalBox",
+											"title": '',
+											"content": '<span class="login"><i>预测币价</i>'+priceVal+'</span>',
+											success: function() {
+												toastlxl.show('提交成功')
+											},
+											cancel: function() {
+
+											}
+										})
+									} else if(res.code == 1) {
+										toastlxl.show(res.info)
+									} else if(res.code == 2) {
+										modallxl = new Modal({
+											"eleId": "modalBox",
+											"title": '',
+											"content": '<span class="login">请先填写提币地址</span>',
+											success: function() {
+												window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
+												console.log(window.localStorage.getItem('fromUrl'));
+												window.location.href = coinURL;
+											},
+											cancel: function() {
+
+											}
+										})
+									} else {
+										modallxl = new Modal({
+											"eleId": "modalBox",
+											"title": '',
+											"content": '<span class="login">请先登录</span>',
+											success: function() {
+												window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
+												console.log(window.localStorage.getItem('fromUrl'));
+												window.location.href = loginURL;
+											},
+											cancel: function() {
+
+											}
+										})
+									}
+								}
+							});
+						} else {
+							modallxl = new Modal({
+								"eleId": "modalBox",
+								"title": '',
+								"content": '<span class="login">请先登录</span>',
+								success: function() {
+									window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
+									console.log(window.localStorage.getItem('fromUrl'));
+									window.location.href = loginURL;
+								},
+								cancel: function() {
+
+								}
+							})
+						}
+					} else {
+						toastlxl.show('请输入0~99999.99')
+					}
+
 				})
 			})
 		</script>
 	</body>
+
 </html>

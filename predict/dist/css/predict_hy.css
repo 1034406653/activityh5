@@ -1,0 +1,186 @@
+.foot-main2-title {
+  width: 100%;
+  height: 1.2000rem;
+  background: #6744f6;
+  border-radius: 0.0933rem 0.0933rem 0 0;
+}
+.foot-main2-title p {
+  width: 50%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2000rem;
+}
+.foot-main2-title .foot-main2-user {
+  float: left;
+  border-radius: 0.0933rem 0 0 0;
+}
+.foot-main2-title .foot-main2-predict {
+  float: right;
+  border-radius: 0  0.0933rem 0 0;
+}
+.foot-main3-title {
+  width: 100%;
+  height: 1.2000rem;
+  background: #6744f6;
+  border-radius: 0.0933rem 0.0933rem 0 0;
+}
+.foot-main3-title p {
+  width: 33%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2000rem;
+}
+.foot-main3-title .foot-main3-date {
+  float: left;
+  border-radius: 0.0933rem 0 0 0;
+}
+.foot-main3-title .foot-main3-price {
+  float: left;
+  border-radius: 0;
+}
+.foot-main3-title .foot-main3-gift {
+  float: left;
+  border-radius: 0  0.0933rem 0 0;
+}
+#mescroll-part01 {
+  height: 9.6000rem;
+  width: 100%;
+  background-color: #f5f3ff;
+  overflow-y: scroll;
+}
+#mescroll-part01 .data-list01-li {
+  width: 100%;
+  height: 1.2000rem;
+  background: rgba(255, 225, 255, 0);
+}
+#mescroll-part01 .data-list01-li p {
+  width: 50%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #6744f6;
+  line-height: 1.2000rem;
+}
+#mescroll-part01 .data-list01-li .data-list01-userName {
+  float: left;
+}
+#mescroll-part01 .data-list01-li .data-list01-coinPrice {
+  float: right;
+}
+#mescroll-part01 .data-list01-li:nth-child(even) {
+  background: #e5e1fd;
+}
+#mescroll-part01 .data-list01-li:nth-child(odd) {
+  background: rgba(255, 225, 255, 0);
+}
+#mescroll-part02 {
+  height: 9.6000rem;
+  width: 100%;
+  background-color: #f5f3ff;
+  overflow-y: scroll;
+}
+#mescroll-part02 .data-list02-li {
+  width: 100%;
+  height: 1.2000rem;
+  background: rgba(255, 225, 255, 0);
+}
+#mescroll-part02 .data-list02-li p {
+  width: 33%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #6744f6;
+  line-height: 1.2000rem;
+}
+#mescroll-part02 .data-list02-li p img {
+  width: 0.2667rem;
+  height: 0.5333rem;
+  background-size: 100% 100%;
+  margin-left: 0.1333rem;
+  margin-top: 0.3467rem;
+}
+#mescroll-part02 .data-list02-li .data-list02-date {
+  float: left;
+  border-radius: 0.0933rem 0 0 0;
+}
+#mescroll-part02 .data-list02-li .data-list02-coinPrice {
+  float: left;
+  border-radius: 0;
+}
+#mescroll-part02 .data-list02-li .data-list02-giftList {
+  float: left;
+  border-radius: 0  0.0933rem 0 0;
+}
+#mescroll-part02 .data-list02-li:nth-child(even) {
+  background: #e5e1fd;
+}
+#mescroll-part02 .data-list02-li:nth-child(odd) {
+  background: rgba(255, 225, 255, 0);
+}
+.gift-content {
+  width: 100%;
+}
+.gift-content .gift-content-title {
+  width: 10.0000rem;
+  height: 1.2000rem;
+  background: #6744f6;
+}
+.gift-content .gift-content-title p {
+  width: 33%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2000rem;
+  float: left;
+}
+.gift-content #gift-content-ul {
+  width: 100%;
+  background-color: #f5f3ff;
+  overflow-y: scroll;
+}
+.gift-content #gift-content-ul .gift-content-end {
+  width: 100%;
+  height: 1.2000rem;
+  background: rgba(255, 225, 255, 0);
+}
+.gift-content #gift-content-ul .gift-content-end p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: gray;
+  line-height: 1.2000rem;
+  float: left;
+}
+.gift-content #gift-content-ul .gift-content-li {
+  width: 100%;
+  height: 1.2000rem;
+  background: rgba(255, 225, 255, 0);
+}
+.gift-content #gift-content-ul .gift-content-li p {
+  width: 33%;
+  height: 100%;
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #6744f6;
+  line-height: 1.2000rem;
+  float: left;
+}
+.gift-content #gift-content-ul .gift-content-li:nth-child(even) {
+  background: #e5e1fd;
+}
+.gift-content #gift-content-ul .gift-content-li:nth-child(odd) {
+  background: rgba(255, 225, 255, 0);
+}
