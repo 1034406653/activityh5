@@ -10,21 +10,25 @@
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="dist/css/common.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/predict.css" />
-		<link rel="stylesheet" type="text/css" href="dist/css/predict_hy.css" /> <!--hanyu made css-->
-		<link rel="stylesheet" type="text/css" href="dist/css/mescroll.css" /> <!--hanyu made css-->
+		<link rel="stylesheet" type="text/css" href="dist/css/predict_hy.css" />
+		<!--hanyu made css-->
+		<link rel="stylesheet" type="text/css" href="dist/css/mescroll.css" />
+		<!--hanyu made css-->
 		<script src="dist/js/flexible.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js?v=1.0.1"></script>
 		<script src="src/js/toastlxl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="src/js/parameter.js" type="text/javascript" charset="utf-8"></script>
 		<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
-		<script src="src/js/index_hy.js" type="text/javascript" charset="utf-8"></script> <!--hanyu made js-->
-		<script src="src/js/mescroll.min.js" type="text/javascript" charset="utf-8"></script> <!--hanyu made js-->
+		<script src="src/js/index_hy.js" type="text/javascript" charset="utf-8"></script>
+		<!--hanyu made js-->
+		<script src="src/js/mescroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--hanyu made js-->
 		<title>预测币价</title>
 	</head>
 
 	<body>
 		<div class="banner">
-			
+
 		</div>
 		<div class="content1">
 			<div class="topBorder1"></div>
@@ -34,20 +38,20 @@
 					<span>奖品</span>
 					<b></b>
 				</div>
-					<ul>
-						<li>
-							<div class="prize1"></div>
-							<p>一等奖</p>
-						</li>
-						<li>
-							<div class="prize2"></div>
-							<p>二等奖</p>
-						</li>
-						<li>
-							<div class="prize3"></div>
-							<p>三等奖</p>
-						</li>
-					</ul>
+				<ul>
+					<li>
+						<div class="prize1"></div>
+						<p>一等奖</p>
+					</li>
+					<li>
+						<div class="prize2"></div>
+						<p>二等奖</p>
+					</li>
+					<li>
+						<div class="prize3"></div>
+						<p>三等奖</p>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="content2">
@@ -63,7 +67,7 @@
 					<span>USDT</span>
 					<div class="subBtn">确定</div>
 				</div>
-				
+
 			</div>
 		</div>
 		<div class="foot">
@@ -116,7 +120,7 @@
 					<ul id="mescroll-dataList02" class="data-list02"></ul>
 				</div>
 			</div>
-		
+
 			<div id="toastBox" class="toastlxl">
 
 			</div>
@@ -135,7 +139,8 @@
 				var toastlxl = new Toastlxl('toastBox');
 				var modallxl = "";
 				var jiazhuoToken = getQueryString('token') || window.localStorage.getItem('jiazhuoToken') || '';
-				window.localStorage.setItem('jiazhuoToken',jiazhuoToken);
+				console.log(jiazhuoToken);
+				window.localStorage.setItem('jiazhuoToken', jiazhuoToken);
 				$.ajax({
 					type: "post",
 					url: baseURL + '/guessing/get_guessing',
@@ -143,6 +148,7 @@
 					async: true,
 					success(res) {
 						if(res.code == 0) {
+							console.log(res);
 							$(".prize1").text(res.data.first_prize)
 							$(".prize2").text(res.data.second_prize)
 							$(".prize3").text(res.data.third_prize)
@@ -150,18 +156,18 @@
 						}
 					}
 				});
-				$('.foot_nav li').click(function(){
+				$('.foot_nav li').click(function() {
 					$(this).addClass("active");
 					$(this).siblings("li").removeClass('active');
-					if($(this).index()=="0"){
+					if($(this).index() == "0") {
 						$(".foot-main2").hide()
 						$(".foot-main3").hide()
 						$(".foot-main1").show()
-					}else if($(this).index()=="1"){
+					} else if($(this).index() == "1") {
 						$(".foot-main1").hide()
 						$(".foot-main3").hide()
 						$(".foot-main2").show()
-					}else if($(this).index()=="2"){
+					} else if($(this).index() == "2") {
 						$(".foot-main1").hide()
 						$(".foot-main2").hide()
 						$(".foot-main3").show()
@@ -184,61 +190,66 @@
 					console.log(jiazhuoToken);
 					if(0 < priceVal && priceVal <= 99999.99) {
 						if(jiazhuoToken) {
-							$.ajax({
-								type: "post",
-								url: baseURL + '/guessing/enroll',
-								data: {
-									token: jiazhuoToken,
-									price: priceVal,
-								},
-								async: true,
-								success(res) {
-									console.log(res);
-									if(res.code == 0) {
-										modallxl = new Modal({
-											"eleId": "modalBox",
-											"title": '',
-											"content": '<span class="login"><i>预测币价</i>'+priceVal+'</span>',
-											success: function() {
+							modallxl = new Modal({
+								"eleId": "modalBox",
+								"title": '',
+								"content": '<span class="login"><i>预测币价</i>' + priceVal + '</span>',
+								success: function() {
+									$('#modalBox').hide();
+									$.ajax({
+										type: "post",
+										url: baseURL + '/guessing/enroll',
+										data: {
+											token: jiazhuoToken,
+											price: priceVal,
+										},
+										async: true,
+										success(res) {
+											console.log(res);
+											if(res.code == 0) {
 												toastlxl.show('提交成功')
-											},
-											cancel: function() {
 
-											}
-										})
-									} else if(res.code == 1) {
-										toastlxl.show(res.info)
-									} else if(res.code == 2) {
-										modallxl = new Modal({
-											"eleId": "modalBox",
-											"title": '',
-											"content": '<span class="login">请先填写提币地址</span>',
-											success: function() {
-												window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
-												console.log(window.localStorage.getItem('fromUrl'));
-												window.location.href = coinURL;
-											},
-											cancel: function() {
+											} else if(res.code == 1) {
+												toastlxl.show(res.info)
+											} else if(res.code == 2) {
+												modallxl = new Modal({
+													"eleId": "modalBox",
+													"title": '',
+													"content": '<span class="login">请先填写提币地址</span>',
+													success: function() {
+														window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
+														$('#modalBox').hide();
+														console.log(window.localStorage.getItem('fromUrl'));
+														window.location.href = coinURL;
+													},
+													cancel: function() {
 
-											}
-										})
-									} else {
-										modallxl = new Modal({
-											"eleId": "modalBox",
-											"title": '',
-											"content": '<span class="login">请先登录</span>',
-											success: function() {
-												window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
-												console.log(window.localStorage.getItem('fromUrl'));
-												window.location.href = loginURL;
-											},
-											cancel: function() {
+													}
+												})
+											} else {
+												modallxl = new Modal({
+													"eleId": "modalBox",
+													"title": '',
+													"content": '<span class="login">请先登录</span>',
+													success: function() {
+														window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');	
+														$('#modalBox').hide();
+														console.log(window.localStorage.getItem('fromUrl'));
+														window.location.href = loginURL;
+													},
+													cancel: function() {
 
+													}
+												})
 											}
-										})
-									}
+										}
+									});
+
+								},
+								cancel: function() {
+
 								}
-							});
+							})
 						} else {
 							modallxl = new Modal({
 								"eleId": "modalBox",
@@ -247,6 +258,7 @@
 								success: function() {
 									window.localStorage.setItem('fromUrl', webURL + 'activity/predict/index.html');
 									console.log(window.localStorage.getItem('fromUrl'));
+									$('#modalBox').hide();
 									window.location.href = loginURL;
 								},
 								cancel: function() {
