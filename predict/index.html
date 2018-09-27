@@ -63,7 +63,7 @@
 					<b></b>
 				</div>
 				<div class="input_box">
-					<input type="number" placeholder="0~99999.99" max="99999.99" name="points" />
+					<input type="number" placeholder="0~99999.99" max="99999.99" name="points" onkeyup="this.value=this.value.replace(/[^\d\.]/g, '')"/>
 					<span>USDT</span>
 					<div class="subBtn">确定</div>
 				</div>
