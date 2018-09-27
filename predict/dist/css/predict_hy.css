@@ -1,13 +1,13 @@
 .foot-main2-title {
   width: 100%;
-  height: 1.2000rem;
+  height: 1.3333rem;
   background: #6744f6;
   border-radius: 0.0933rem 0.0933rem 0 0;
 }
 .foot-main2-title p {
   width: 50%;
   height: 100%;
-  font-size: 0.3733rem;
+  font-size: 0.4267rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #ffffff;
@@ -23,14 +23,14 @@
 }
 .foot-main3-title {
   width: 100%;
-  height: 1.2000rem;
+  height: 1.3333rem;
   background: #6744f6;
   border-radius: 0.0933rem 0.0933rem 0 0;
 }
 .foot-main3-title p {
   width: 33%;
   height: 100%;
-  font-size: 0.3733rem;
+  font-size: 0.4267rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #ffffff;
@@ -49,20 +49,21 @@
   border-radius: 0  0.0933rem 0 0;
 }
 #mescroll-part01 {
-  height: 9.6000rem;
+  border-radius: 0.0933rem;
+  height: 12.0000rem;
   width: 100%;
   background-color: #f5f3ff;
   overflow-y: scroll;
 }
 #mescroll-part01 .data-list01-li {
   width: 100%;
-  height: 1.2000rem;
+  height: 1.3333rem;
   background: rgba(255, 225, 255, 0);
 }
 #mescroll-part01 .data-list01-li p {
+  font-size: 0.4267rem;
   width: 50%;
   height: 100%;
-  font-size: 0.3733rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #6744f6;
@@ -81,20 +82,21 @@
   background: rgba(255, 225, 255, 0);
 }
 #mescroll-part02 {
-  height: 9.6000rem;
+  border-radius: 0.0933rem;
+  height: 12.0000rem;
   width: 100%;
   background-color: #f5f3ff;
   overflow-y: scroll;
 }
 #mescroll-part02 .data-list02-li {
   width: 100%;
-  height: 1.2000rem;
+  height: 1.3333rem;
   background: rgba(255, 225, 255, 0);
 }
 #mescroll-part02 .data-list02-li p {
+  font-size: 0.4267rem;
   width: 33%;
   height: 100%;
-  font-size: 0.3733rem;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #6744f6;

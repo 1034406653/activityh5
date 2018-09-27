@@ -3,14 +3,15 @@ body {
 }
 
 .banner {
-    width: 100%;
-    height: 700px;
+    width: 750px;
+    height: 450px;
     background: url(../img/top_banner@2x.png);
     background-size: 100% 100%;
 }
 
 .content1,
-.content2 {
+.content2,
+.content3 {
     width: 100%;
     height: 360px;
     position: relative;
@@ -73,17 +74,27 @@ body {
                 opacity: 0.1017;
             }
         }
+        .subBtn {
+            margin: 30px auto;
+            width: 330px;
+            height: 90px;
+            border-radius: 8px;
+            line-height: 90px;
+            font-size: 28px;
+            color: rgba(255, 255, 255, 1);
+            background: rgba(91, 64, 235, 1);
+        }
         .input_box {
-            margin-top: 10px;
             width: 578px;
             height: 90px;
             margin: 0 auto;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.02);
+            margin-top: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.02);
             border-radius: 8px;
             position: relative;
             overflow: hidden;
             input {
-                width: 267px;
+                width: 578px;
                 height: 90px;
                 font-size: 40px;
                 font-family: PingFangSC-Medium;
@@ -97,41 +108,65 @@ body {
             }
             input::-webkit-input-placeholder {
                 /* WebKit, Blink, Edge */
-                color: #5A4E9D;
+                color: #AFA9D5;
+                font-size:40px;
             }
             input:-moz-placeholder {
                 /* Mozilla Firefox 4 to 18 */
-                color: #5A4E9D;
+                color: #AFA9D5;
+                font-size:40px;
             }
             input::-moz-placeholder {
                 /* Mozilla Firefox 19+ */
-                color: #5A4E9D;
+                color: #AFA9D5;
+                font-size:40px;
             }
             input:-ms-input-placeholder {
                 /* Internet Explorer 10-11 */
-                color: #5A4E9D;
+                color: #AFA9D5;
+                font-size:40px;
             }
             span {
-                float: left;
-                width: auto;
-                height: 90px;
+                position: absolute;
+                top: 30px;
+                right: 25px;
+                width: 100px;
+                height: 40px;
                 font-size: 32px;
                 font-weight: 400;
                 color: rgba(129, 115, 200, 1);
-                line-height: 90px;
+                line-height: 40px;
                 background: rgba(229, 225, 253, 1);
-                padding-right: 40px;
                 border-radius: 0 8px 8px 0;
             }
-            .subBtn {
-                float: right;
-                width: 160px;
-                height: 90px;
-                border-radius: 8px;
-                line-height: 90px;
-                font-size: 28px;
-                color: rgba(255, 255, 255, 1);
-                background: rgba(91, 64, 235, 1);
+        }
+        .content2-text {
+            width: 90%;
+            margin: 0 auto;
+            .content2-text-p1 {
+                text-align: center;
+                width: 100%;
+                font-size:28px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(129,115,200,1);
+                line-height:36px;
+                span {
+                    font-size:28px;
+                    font-family:PingFangSC-Medium;
+                    font-weight:500;
+                    color:rgba(91,64,235,1);
+                    line-height:40px;
+                }
+            }
+            .content2-text-p2 {
+                margin-top: 10px;
+                text-align: center;
+                font-size:24px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(129,115,200,1);
+                line-height:30px;
             }
         }
         ul {
@@ -163,9 +198,15 @@ body {
 }
 
 .content2 {
-    height: 350px;
+    height: 570px;
     .content-main {
-        height: 286px;
+        height: 530px;
+    }
+}
+
+.content3 {
+    .content3-img {
+
     }
 }
 
@@ -230,13 +271,25 @@ body {
             height: auto;
             padding: 70px 40px;
             li {
+                position: relative;
                 width: 100%;
                 height: auto;
-                font-size: 14px;
+                font-size: 16px;
                 color: rgba(91, 64, 235, 1);
-                line-height: 40px;
+                line-height: 48px;
                 text-align: left;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
+                padding-left: 40px;
+                .foot-main1-ul-li-span {
+                    font-size: 32px;
+                    display: block;
+                    width: 30px;
+                    height: 48px;
+                    line-height: 48px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
             }
         }
     }
@@ -261,6 +314,7 @@ body {
         display: none;
     }
 }
+
 .toastlxl {
     display: none;
     height: 70px;
@@ -300,6 +354,13 @@ body {
         .content {
             width: 100%;
             height: auto;
+            .contentTitle {
+                font-size: 36px;
+                font-family: PingFangSC-Medium;
+                font-weight: 600;
+                color: rgba(90, 78, 157, 1);
+                line-height: 140px;
+            }
             span.login {
                 display: block;
                 width: 100%;
@@ -318,10 +379,14 @@ body {
             span.confirmhint {
                 display: block;
                 width: 100%;
+                margin: 0 auto;
+                padding-left: 30%;
+                /*margin-left: 20%;*/
+                text-align: left;
                 height: 70px;
                 font-size: 28px;
                 font-family: PingFangSC-Medium;
-                font-weight: 500;
+                font-weight: 600;
                 color: rgba(90, 78, 157, 1);
                 line-height: 40px;
                 i {
@@ -348,20 +413,20 @@ body {
             height: 100px;
             line-height: 98px;
             font-size: 32px;
-            border-top: 2px solid rgba(235,237,241,1);
+            border-top: 2px solid rgba(235, 237, 241, 1);
             .cancel {
                 float: left;
                 width: 50%;
                 height: 98px;
                 font-size: 0.4rem;
-                color: rgba(90,78,157,1);
-                border-right: rgba(235,237,241,1) 2px solid;
+                color: rgba(90, 78, 157, 1);
+                border-right: rgba(235, 237, 241, 1) 2px solid;
             }
             .confirm {
                 float: left;
                 width: 50%;
-                height: 98px;      
-                color: rgba(63,44,164,1);
+                height: 98px;
+                color: rgba(63, 44, 164, 1);
             }
         }
     }

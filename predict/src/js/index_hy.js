@@ -20,7 +20,6 @@ $(function () {
     /*联网加载列表数据  page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
     function getListData01(page) {
         //联网加载数据
-        console.log("page.num==" + page.num);
         getListDataFromNet01(page.num, page.size, function (data) {
             //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
             mescroll01.endSuccess(data.length);//传参:数据的总数; mescroll会自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
@@ -34,7 +33,6 @@ $(function () {
 
     function getListData02(page) {
         //联网加载数据
-        console.log("page.num==" + page.num);
         getListDataFromNet02(page.num, page.size, function (data) {
             //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
             mescroll02.endSuccess(data.length);//传参:数据的总数; mescroll会自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
@@ -90,7 +88,6 @@ $(function () {
             data: {page: pageNum, pagesize: pageSize},
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 if (data.code === 0) {
                     var listData01 = [];
                     for (var i = (pageNum - 1) * pageSize; i < pageNum * pageSize; i++) {
@@ -113,7 +110,6 @@ $(function () {
             data: {page: pageNum, pagesize: pageSize},
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 if (data.code === 0) {
                     var listData02 = [];
                     for (var i = (pageNum - 1) * pageSize; i < pageNum * pageSize; i++) {

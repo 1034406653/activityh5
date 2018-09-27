@@ -2,19 +2,21 @@ body {
   font-family: PingFangSC-Regular;
 }
 .banner {
-  width: 100%;
-  height: 9.3333rem;
+  width: 10.0000rem;
+  height: 6.0000rem;
   background: url(../img/top_banner@2x.png);
   background-size: 100% 100%;
 }
 .content1,
-.content2 {
+.content2,
+.content3 {
   width: 100%;
   height: 4.8000rem;
   position: relative;
 }
 .content1 .topBorder1,
-.content2 .topBorder1 {
+.content2 .topBorder1,
+.content3 .topBorder1 {
   width: 9.6000rem;
   height: 1.0667rem;
   position: absolute;
@@ -26,7 +28,8 @@ body {
   z-index: 1;
 }
 .content1 .topBorder2,
-.content2 .topBorder2 {
+.content2 .topBorder2,
+.content3 .topBorder2 {
   width: 8.7733rem;
   height: 0.6267rem;
   position: absolute;
@@ -38,7 +41,8 @@ body {
   z-index: 3;
 }
 .content1 .content-main,
-.content2 .content-main {
+.content2 .content-main,
+.content3 .content-main {
   position: absolute;
   width: 8.7733rem;
   height: 3.6000rem;
@@ -52,7 +56,8 @@ body {
   padding-top: 0.4933rem;
 }
 .content1 .content-main .content_title,
-.content2 .content-main .content_title {
+.content2 .content-main .content_title,
+.content3 .content-main .content_title {
   width: 100%;
   height: 1.3333rem;
   font-size: 0.4800rem;
@@ -62,13 +67,15 @@ body {
   position: relative;
 }
 .content1 .content-main .content_title span,
-.content2 .content-main .content_title span {
+.content2 .content-main .content_title span,
+.content3 .content-main .content_title span {
   display: block;
   width: 100%;
   height: 0.6667rem;
 }
 .content1 .content-main .content_title b,
-.content2 .content-main .content_title b {
+.content2 .content-main .content_title b,
+.content3 .content-main .content_title b {
   position: absolute;
   width: 3.0667rem;
   height: 0.4000rem;
@@ -79,20 +86,34 @@ body {
   border-radius: 0.2000rem;
   opacity: 0.1017;
 }
+.content1 .content-main .subBtn,
+.content2 .content-main .subBtn,
+.content3 .content-main .subBtn {
+  margin: 0.4000rem auto;
+  width: 4.4000rem;
+  height: 1.2000rem;
+  border-radius: 0.1067rem;
+  line-height: 1.2000rem;
+  font-size: 0.3733rem;
+  color: #ffffff;
+  background: #5b40eb;
+}
 .content1 .content-main .input_box,
-.content2 .content-main .input_box {
-  margin-top: 0.1333rem;
+.content2 .content-main .input_box,
+.content3 .content-main .input_box {
   width: 7.7067rem;
   height: 1.2000rem;
   margin: 0 auto;
-  box-shadow: 0px 0px 0.1333rem 0px rgba(0, 0, 0, 0.02);
+  margin-top: 0.1333rem;
+  box-shadow: 0 0 0.1333rem 0 rgba(0, 0, 0, 0.02);
   border-radius: 0.1067rem;
   position: relative;
   overflow: hidden;
 }
 .content1 .content-main .input_box input,
-.content2 .content-main .input_box input {
-  width: 3.5600rem;
+.content2 .content-main .input_box input,
+.content3 .content-main .input_box input {
+  width: 7.7067rem;
   height: 1.2000rem;
   font-size: 0.5333rem;
   font-family: PingFangSC-Medium;
@@ -105,64 +126,103 @@ body {
   border-radius: 0.1067rem 0 0 0.1067rem;
 }
 .content1 .content-main .input_box input::-webkit-input-placeholder,
-.content2 .content-main .input_box input::-webkit-input-placeholder {
+.content2 .content-main .input_box input::-webkit-input-placeholder,
+.content3 .content-main .input_box input::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #5A4E9D;
+  color: #AFA9D5;
+  font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input:-moz-placeholder,
-.content2 .content-main .input_box input:-moz-placeholder {
+.content2 .content-main .input_box input:-moz-placeholder,
+.content3 .content-main .input_box input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #5A4E9D;
+  color: #AFA9D5;
+  font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input::-moz-placeholder,
-.content2 .content-main .input_box input::-moz-placeholder {
+.content2 .content-main .input_box input::-moz-placeholder,
+.content3 .content-main .input_box input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #5A4E9D;
+  color: #AFA9D5;
+  font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input:-ms-input-placeholder,
-.content2 .content-main .input_box input:-ms-input-placeholder {
+.content2 .content-main .input_box input:-ms-input-placeholder,
+.content3 .content-main .input_box input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #5A4E9D;
+  color: #AFA9D5;
+  font-size: 0.5333rem;
 }
 .content1 .content-main .input_box span,
-.content2 .content-main .input_box span {
-  float: left;
-  width: auto;
-  height: 1.2000rem;
+.content2 .content-main .input_box span,
+.content3 .content-main .input_box span {
+  position: absolute;
+  top: 0.4000rem;
+  right: 0.3333rem;
+  width: 1.3333rem;
+  height: 0.5333rem;
   font-size: 0.4267rem;
   font-weight: 400;
   color: #8173c8;
-  line-height: 1.2000rem;
+  line-height: 0.5333rem;
   background: #e5e1fd;
-  padding-right: 0.5333rem;
   border-radius: 0  0.1067rem 0.1067rem 0;
 }
-.content1 .content-main .input_box .subBtn,
-.content2 .content-main .input_box .subBtn {
-  float: right;
-  width: 2.1333rem;
-  height: 1.2000rem;
-  border-radius: 0.1067rem;
-  line-height: 1.2000rem;
+.content1 .content-main .content2-text,
+.content2 .content-main .content2-text,
+.content3 .content-main .content2-text {
+  width: 90%;
+  margin: 0 auto;
+}
+.content1 .content-main .content2-text .content2-text-p1,
+.content2 .content-main .content2-text .content2-text-p1,
+.content3 .content-main .content2-text .content2-text-p1 {
+  text-align: center;
+  width: 100%;
   font-size: 0.3733rem;
-  color: #ffffff;
-  background: #5b40eb;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #8173c8;
+  line-height: 0.4800rem;
+}
+.content1 .content-main .content2-text .content2-text-p1 span,
+.content2 .content-main .content2-text .content2-text-p1 span,
+.content3 .content-main .content2-text .content2-text-p1 span {
+  font-size: 0.3733rem;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #5b40eb;
+  line-height: 0.5333rem;
+}
+.content1 .content-main .content2-text .content2-text-p2,
+.content2 .content-main .content2-text .content2-text-p2,
+.content3 .content-main .content2-text .content2-text-p2 {
+  margin-top: 0.1333rem;
+  text-align: center;
+  font-size: 0.3200rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #8173c8;
+  line-height: 0.4000rem;
 }
 .content1 .content-main ul,
-.content2 .content-main ul {
+.content2 .content-main ul,
+.content3 .content-main ul {
   width: 100%;
   height: auto;
   overflow: hidden;
   padding: 0  0.5333rem;
 }
 .content1 .content-main ul li,
-.content2 .content-main ul li {
+.content2 .content-main ul li,
+.content3 .content-main ul li {
   float: left;
   width: 33.33%;
   height: 1.2000rem;
 }
 .content1 .content-main ul li div,
-.content2 .content-main ul li div {
+.content2 .content-main ul li div,
+.content3 .content-main ul li div {
   width: 100%;
   height: 0.7467rem;
   line-height: 0.7467rem;
@@ -170,7 +230,8 @@ body {
   color: #5C43EC;
 }
 .content1 .content-main ul li p,
-.content2 .content-main ul li p {
+.content2 .content-main ul li p,
+.content3 .content-main ul li p {
   width: 100%;
   height: 0.4400rem;
   line-height: 0.4400rem;
@@ -178,10 +239,10 @@ body {
   color: #8173C8;
 }
 .content2 {
-  height: 4.6667rem;
+  height: 7.6000rem;
 }
 .content2 .content-main {
-  height: 3.8133rem;
+  height: 7.0667rem;
 }
 .foot {
   width: 100%;
@@ -245,13 +306,25 @@ body {
   padding: 0.9333rem 0.5333rem;
 }
 .foot .foot-main1 ul li {
+  position: relative;
   width: 100%;
   height: auto;
-  font-size: 0.1867rem;
+  font-size: 0.2133rem;
   color: #5b40eb;
-  line-height: 0.5333rem;
+  line-height: 0.6400rem;
   text-align: left;
-  padding-bottom: 0.1333rem;
+  padding-bottom: 0.2667rem;
+  padding-left: 0.5333rem;
+}
+.foot .foot-main1 ul li .foot-main1-ul-li-span {
+  font-size: 0.4267rem;
+  display: block;
+  width: 0.4000rem;
+  height: 0.6400rem;
+  line-height: 0.6400rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .foot .foot-main2 {
   margin: 0.1333rem auto;
@@ -311,6 +384,13 @@ body {
   width: 100%;
   height: auto;
 }
+#modalBox .modalBody .content .contentTitle {
+  font-size: 0.4800rem;
+  font-family: PingFangSC-Medium;
+  font-weight: 600;
+  color: #5a4e9d;
+  line-height: 1.8667rem;
+}
 #modalBox .modalBody .content span.login {
   display: block;
   width: 100%;
@@ -329,10 +409,14 @@ body {
 #modalBox .modalBody .content span.confirmhint {
   display: block;
   width: 100%;
+  margin: 0 auto;
+  padding-left: 30%;
+  /*margin-left: 20%;*/
+  text-align: left;
   height: 0.9333rem;
   font-size: 0.3733rem;
   font-family: PingFangSC-Medium;
-  font-weight: 500;
+  font-weight: 600;
   color: #5a4e9d;
   line-height: 0.5333rem;
 }
