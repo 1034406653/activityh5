@@ -129,28 +129,28 @@ body {
 .content2 .content-main .input_box input::-webkit-input-placeholder,
 .content3 .content-main .input_box input::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #AFA9D5;
+  color: #d9d5f2;
   font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input:-moz-placeholder,
 .content2 .content-main .input_box input:-moz-placeholder,
 .content3 .content-main .input_box input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #AFA9D5;
+  color: #d9d5f2;
   font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input::-moz-placeholder,
 .content2 .content-main .input_box input::-moz-placeholder,
 .content3 .content-main .input_box input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #AFA9D5;
+  color: #d9d5f2;
   font-size: 0.5333rem;
 }
 .content1 .content-main .input_box input:-ms-input-placeholder,
 .content2 .content-main .input_box input:-ms-input-placeholder,
 .content3 .content-main .input_box input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #AFA9D5;
+  color: #d9d5f2;
   font-size: 0.5333rem;
 }
 .content1 .content-main .input_box span,
