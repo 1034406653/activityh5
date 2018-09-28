@@ -238,13 +238,40 @@ body {
   font-size: 0.3200rem;
   color: #8173C8;
 }
+.content1 {
+  margin-top: -0.2667rem;
+}
 .content2 {
-  height: 7.6000rem;
+  height: 7.3333rem;
 }
 .content2 .content-main {
   height: 7.0667rem;
 }
+.content3 {
+  height: 4.8000rem;
+}
+.content3 .content3-img {
+  height: 4.8000rem;
+}
+.content3 .content3-img img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5333rem;
+  width: 1.8667rem;
+  height: 1.8667rem;
+  background-size: 100% 100%;
+}
+.content3 .content3-img p {
+  margin: 0 auto;
+  margin-top: 0.2667rem;
+  font-size: 0.4000rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 500;
+  color: #5a4e9d;
+  line-height: 0.5333rem;
+}
 .foot {
+  margin-top: 0.4000rem;
   width: 100%;
   height: auto;
 }
