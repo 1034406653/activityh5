@@ -31,6 +31,8 @@ $(function () {
                 $('.content1').hide();
                 $('.content2').hide();
                 $('.content3').show();
+            } else {
+                console.log(res.info)
             }
         }
     });

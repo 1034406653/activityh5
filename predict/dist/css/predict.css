@@ -2,7 +2,7 @@ body {
   font-family: PingFangSC-Regular;
 }
 .banner {
-  width: 10.0000rem;
+  width: 100%;
   height: 6.0000rem;
   background: url(../img/top_banner@2x.png);
   background-size: 100% 100%;
@@ -309,7 +309,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  font-size: 0.2133rem;
+  font-size: 0.4267rem;
   color: #5b40eb;
   line-height: 0.6400rem;
   text-align: left;
@@ -325,6 +325,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+.foot .foot-main1 ul li .reduce_dio {
+  font-size: 0.4267rem;
+  line-height: 0.6400rem;
 }
 .foot .foot-main2 {
   margin: 0.1333rem auto;
