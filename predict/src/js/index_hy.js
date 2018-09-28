@@ -84,7 +84,7 @@ $(function () {
     function getListDataFromNet01(pageNum, pageSize, successCallback, errorCallback) {
         $.ajax({
             type: 'POST',
-            url: 'https://a.hzjiazhuo.com/api/guessing/get_today',
+            url: baseURL+'/guessing/get_today',
             data: {page: pageNum, pagesize: pageSize},
             dataType: 'json',
             success: function (data) {
@@ -106,7 +106,7 @@ $(function () {
     function getListDataFromNet02(pageNum, pageSize, successCallback, errorCallback) {
         $.ajax({
             type: 'POST',
-            url: 'https://a.hzjiazhuo.com/api/guessing/past_period',
+            url: baseURL+'/guessing/past_period',
             data: {page: pageNum, pagesize: pageSize},
             dataType: 'json',
             success: function (data) {

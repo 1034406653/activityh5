@@ -1,8 +1,7 @@
 $(function () {
     console.log(window.location.href)
     /*基础设置*/
-    var baseURL = 'https://a.hzjiazhuo.com/api';
-    var webURL = 'http://web.hzjiazhuo.com/';
+   
     var loginURL = 'http://web.hzjiazhuo.com/#/acount/login';
     var coinURL = 'http://web.hzjiazhuo.com/#/center/draw';
     var toastlxl = new Toastlxl('toastBox');
