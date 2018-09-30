@@ -26,7 +26,6 @@ $(function () {
                 $('.content2').show();
                 $('.content3').hide();
             } else if (res.code === 1) {
-                console.log(1)
                 $('.content1').hide();
                 $('.content2').hide();
                 $('.content3').show();
