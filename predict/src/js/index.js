@@ -2,8 +2,8 @@ $(function () {
     console.log(window.location.href)
     /*基础设置*/
    
-    var loginURL = 'http://web.hzjiazhuo.com/#/acount/login';
-    var coinURL = 'http://web.hzjiazhuo.com/#/center/draw';
+    var loginURL = 'http://m.hzjiazhuo.com/#/acount/login';
+    var coinURL = 'http://m.hzjiazhuo.com/#/center/draw';
     var toastlxl = new Toastlxl('toastBox');
     var modallxl = "";
     var jiazhuoToken = getQueryString('token') || window.localStorage.getItem('jiazhuoToken') || '';
