@@ -20,6 +20,9 @@ $(function () {
                 $(".prize1").text(res.data.guessing_price.first_prize)
                 $(".prize2").text(res.data.guessing_price.second_prize)
                 $(".prize3").text(res.data.guessing_price.third_prize)
+                $(".prize-span1").text(res.data.guessing_price.first_count + '个')
+                $(".prize-span2").text(res.data.guessing_price.second_count + '个')
+                $(".prize-span3").text(res.data.guessing_price.third_count + '个')
                 $('.reduce_dio').text(res.data.guessing_price.reduce_dio)
                 $('.BTC-countPrice').text(res.data.closing_price)
                 $('.content1').show();
