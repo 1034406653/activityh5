@@ -26,7 +26,7 @@ gulp.task('imgmin', function () {
 
 gulp.task('Watch', function() {
 	gulp.watch('src/less/*.less', ['Less']);
-	gulp.watch('dist/css/*.css', ['px2rem']);
+	gulp.watch('dist/css/!*.css', ['px2rem']);
 	gulp.watch('src/img/*.{jpg,png}', ['imgmin']);
 });
 gulp.task('default', ['Watch', 'Less', 'px2rem', 'imgmin']);

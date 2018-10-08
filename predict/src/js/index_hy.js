@@ -90,7 +90,7 @@ $(function () {
             success: function (data) {
                 if (data.code === 0) {
                     var listData01 = [];
-                    for (var i = (pageNum - 1) * pageSize; i < pageNum * pageSize; i++) {
+                    for (var i = 0; i < pageSize; i++) {
                         if (i === data.data.list.length) break;
                         listData01.push(data.data.list[i]);
                     }
