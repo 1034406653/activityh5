@@ -14,7 +14,7 @@
             height: auto;
             position: relative;
             background-color: rgba(0, 0, 0, 1);
-            padding-bottom: 30px;
+            padding-bottom: 110px;
         }
 
         .bet-nav {
@@ -127,12 +127,37 @@
             background-color: rgba(255, 255, 255, 0);
         }
 
+        .allBet-ul .allBet-list p {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            font-size:24px;
+            font-family:MicrosoftYaHei;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        #noMore {
+            margin-top: 115px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
         .allBet-ul .allBet-list span:last-of-type {
             color: rgba(230, 194, 28, 1);
         }
 
         .allBet-ul .allBet-list:nth-child(odd) {
             background: rgba(51, 51, 51, 1);
+        }
+
+        #allBet-ul {
+            display: none;
+        }
+
+        #perBet-ul {
+            display: block;
         }
     </style>
 </head>
@@ -150,7 +175,7 @@
     </div>
 
     <div class="bet-data">
-        <ul class="allBet-ul">
+        <ul class="allBet-ul" id="allBet-ul">
             <li class="allBet-list-head">
                 <span>时间</span>
                 <span>投注</span>
@@ -170,12 +195,50 @@
                 <span>150000.0000 EOS</span>
             </li>
         </ul>
-        <ul class="perBet-ul">
-
+        <ul class="allBet-ul" id="perBet-ul">
+            <li class="allBet-list-head">
+                <span>时间</span>
+                <span>投注</span>
+                <span>事件</span>
+                <span>奖金</span>
+            </li>
+            <li class="allBet-list">
+                <span>13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list">
+                <span>10/08  13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list">
+                <span>10/08  13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list" id="noMore">
+                <p>没有更多啦～</p>
+            </li>
         </ul>
     </div>
 
 </div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $('#allBet').on('click', function () {
+        $('#allBet-ul').show()
+        $('#perBet-ul').hide()
+    })
+
+    $('#perBet').on('click', function () {
+        $('#perBet-ul').show()
+        $('#allBet-ul').hide()
+    })
+</script>
 </body>
 </html>
 
