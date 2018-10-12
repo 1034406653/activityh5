@@ -1,10 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/common.css" />
+		<link rel="stylesheet" href="dist/css/rangeslider.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/index_hy.css"/>
+		<script src="dist/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/js/rangeslider.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="header-box">
+			<div class="header clearfloat">
+				<div class="logo">
+					<img src="dist/img/Logo506@2x.png" />
+					<h1>EOS150</h1>
+				</div>
+
+				<div class="login-btn">
+					<span>登录</span>
+				</div>
+				<div class="guide">
+					<span>怎么玩</span>
+				</div>
+				<div class="xiala-box language">
+					<div class="xiala-div">
+						中文
+					</div>
+					<ul class="xiala-list">
+						<li>中文</li>
+						<li>English</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main-box">
+			<div class="main-content-box">
+				<div class="main-content">
+					<div class="main-touzi">
+						<ul>
+							<li>
+								<img src="dist/img/dice_6.png" />
+							</li>
+							<li>
+								<img src="dist/img/dice_6.png" />
+							</li>
+							<li>
+								<img src="dist/img/dice_6.png" />
+							</li>
+						</ul>
+					</div>
+					<div class="main-form">
+						<div class="sort sort1">
+							<div class="sort-title">
+								大小单双
+							</div>
+							<div class="sort1-list">
+								<ul>
+									<li class="activeLi" size='2'>
+										<i>(11~17)</i>
+										<span>大</span>
+										<b></b>
+									</li>
+									<li size='2'>
+										<i>(4~10)</i>
+										<span>小</span>
+										<b></b>
+									</li>
+									<li size='2'>
+										<span>单</span>
+										<b></b>
+									</li>
+									<li size='2'>
+										<span>双</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sort sort2">
+							<div class="sort-title">
+								和值
+							</div>
+							<div class="sort2-list">
+								<ul>
+									<li size='51'><span>4</span><b></b></li>
+									<li size='19'><span>5</span><b></b></li>
+									<li size='15'><span>6</span><b></b></li>
+									<li size='13'><span>7</span><b></b></li>
+									<li size='9'><span>8</span><b></b></li>
+									<li size='7'><span>9</span><b></b></li>
+									<li size='7'><span>10</span></li>
+								</ul>
+								<ul>
+									<li size='7'><span>11</span><b></b></li>
+									<li size='7'><span>12</span><b></b></li>
+									<li size='9'><span>13</span><b></b></li>
+									<li size='13'><span>14</span><b></b></li>
+									<li size='15'><span>15</span><b></b></li>
+									<li size='19'><span>16</span><b></b></li>
+									<li size='51'><span>17</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="sort sort3">
+							<div class="sort-title">
+								三同号
+							</div>
+							<div class="sort3-list">
+								<ul>
+									<li size='151'><span>111</span><b></b></li>
+									<li size='151'><span>222</span><b></b></li>
+									<li size='151'><span>333</span><b></b></li>
+									<li size='25'><span>合围</span><b></b></li>
+									<li size='151'><span>444</span><b></b></li>
+									<li size='151'><span>555</span><b></b></li>
+									<li size='151'><span>666</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="myNum">
+							<div class="title">
+								投注金额
+							</div>
+							<div class="allNum">
+								<span>余额：</span><b>9999999.99</b>
+							</div>
+							<div class="rang-box">
+								<input type="range" min="0.1" max="200" step="0.0001" value="0" data-rangeslider style="opacity: 0;">
+								<div class="numList">
+									<p class="minNum"></p>
+									<p class="selectNum"></p>
+									<p class="maxNum"></p>
+								</div>
+							</div>
+							<div class="enterNum-box">
+								<div class="enterNum">
+									<div class="title">
+										投注金额
+									</div>
+									<div class="content">
+										<img src="dist/img/num-icon.png" />
+										<input type="text" value="0.1" onkeyup='clearNoNum(this)' class="enterNumVal"/>
+									</div>
+								</div>
+								<div class="enterNum">
+									<div class="title">
+										预计赢得金额
+									</div>
+									<div class="content">
+										<img src="dist/img/num-icon.png" />
+										<input type="text" value="0" disabled='disabled' class="getNumVal" />
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="main-bg"></div>
+		</div>
+		<div class="bet-wrapper">
+
+    <div class="bet-nav">
+        <div class="bet-nav-block">
+            <p id="allBet">所有投注</p>
+            <p id="perBet">个人投注</p>
+        </div>
+        <div class="bet-nav-line">
+            <div id="moveLine"></div>
+        </div>
+    </div>
+
+    <div class="bet-data">
+        <ul class="allBet-ul" id="allBet-ul">
+            <li class="allBet-list-head">
+                <span>时间</span>
+                <span>投注</span>
+                <span>事件</span>
+                <span>奖金</span>
+            </li>
+            <li class="allBet-list">
+                <span>13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list">
+                <span>13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+        </ul>
+        <ul class="allBet-ul" id="perBet-ul">
+            <li class="allBet-list-head">
+                <span>时间</span>
+                <span>投注</span>
+                <span>事件</span>
+                <span>奖金</span>
+            </li>
+            <li class="allBet-list">
+                <span>13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list">
+                <span>10/08  13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list">
+                <span>10/08  13:59:07</span>
+                <span>500.0000 EOS</span>
+                <span>单</span>
+                <span>150000.0000 EOS</span>
+            </li>
+            <li class="allBet-list" id="noMore">
+                <p>没有更多啦～</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+		<div class="mark-box">
+
+		</div>
+		<div class="guide-box">
+			<div class="close-btn"></div>
+			<div class="title">
+				怎么玩
+			</div>
+			<div class="borde">
+
+			</div>
+			<div class="content-text">
+				<p>1、确保您拥有EOS账户，有关如何;</p>
+				<p>2、如果您还没有，请下载并安装Scatter，这是一个EOS钱包，可以促进用户和Dapp之间的交互;</p>
+				<p>3、设置您的下注EOS数量，也可以调整滑块来设置下注额;</p>
+				<p>4、选择预测的事件;</p>
+				<p>5、点击掷骰子进行下注;</p>
+				<p>6、如果三个骰子数字相加之和与您预测的事件相符，您就赢了;</p>
+				<p>7、如果三个骰子数字相加之和与您预测的事件相符，您就赢了;</p>
+			</div>
+		</div>
+		<div class="toast">
+			<img src="dist/img/toast-close.png"/>
+			<span>必须至少投注 0.1000EOS</span>
+		</div>
+		<script type="text/javascript">
+			function clearNoNum(obj) {
+				obj.value = obj.value.replace(/[^\d.]/g, ""); //清除"数字"和"."以外的字符  
+				obj.value = obj.value.replace(/^\./g, ""); //验证第一个字符是数字而不是  
+				obj.value = obj.value.replace(/^\0/g, ""); //验证第一个字符是数字而不是  
+				obj.value = obj.value.replace(/\.{2,}/g, "."); //只保留第一个. 清除多余的  
+				obj.value = obj.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+				obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d\d\d).*$/, '$1$2.$3'); //只能输入两个小数  
+			}
+		</script>
+	</body>
+
 </html>
