@@ -64,14 +64,14 @@
             border-radius: 3px;
         }
 
-        .goLeft {
-            transform: translate(50%, 0);
-            transition: all .5s linear;
+        .goRight {
+            transform: translate(100%, 0);
+            transition: all .3s linear;
         }
 
-        .goRight {
+        .goLeft {
             transform: translate(0, 0);
-            transition: all .5s linear;
+            transition: all .3s linear;
         }
 
         .bet-data {
@@ -232,11 +232,15 @@
     $('#allBet').on('click', function () {
         $('#allBet-ul').show()
         $('#perBet-ul').hide()
+        $('#moveLine').addClass('goLeft')
+        $('#moveLine').removeClass('goRight')
     })
 
     $('#perBet').on('click', function () {
         $('#perBet-ul').show()
         $('#allBet-ul').hide()
+        $('#moveLine').addClass('goRight')
+        $('#moveLine').removeClass('goLeft')
     })
 </script>
 </body>
