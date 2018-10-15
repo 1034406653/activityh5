@@ -1,0 +1,46 @@
+.rangeslider,
+.rangeslider__fill {
+	background: rgba(141, 141, 141, 1);
+	display: block;
+	height: 14px;
+	width: 100%;
+	border-radius: 7px;
+}
+
+.rangeslider {
+	position: relative;
+}
+
+.rangeslider--disabled {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	opacity: 0.4;
+}
+
+.rangeslider__fill {
+	background: rgba(255, 218, 45, 1);
+	box-shadow: 0px 0px 10px 0px rgba(225, 194, 49, 0.53);
+	position: absolute;
+	top: 0;
+}
+
+.rangeslider__handle {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: -5px;
+	width: 24px;
+	height: 24px;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	box-shadow: 4px 0px 2px 0px rgba(4, 12, 82, 0.28);
+}
+
+.rangeslider__handle:after {}
+
+.rangeslider__handle:active {}
+
+input[type="range"]:focus+.rangeslider .rangeslider__handle {
+	-moz-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+	-webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+	box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+}

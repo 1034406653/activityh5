@@ -1,0 +1,519 @@
+.header-box {
+  width: 100%;
+  height: 90px;
+  background: #4a4848;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header-box .header {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 24px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 auto;
+}
+.header-box .header .logo {
+  width: auto;
+  height: 90px;
+  float: left;
+  overflow: hidden;
+}
+.header-box .header .logo img {
+  float: left;
+  width: 54px;
+  height: 55px;
+  margin-top: 18px;
+}
+.header-box .header .logo h1 {
+  float: left;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffda2d;
+  padding-left: 15px;
+}
+.header-box .header .login-btn {
+  float: right;
+  width: 50px;
+  font-size: 16px;
+  color: #f2d75c;
+  line-height: 16px;
+  padding-top: 50px;
+}
+.header-box .header .login-btn span {
+  cursor: pointer;
+}
+.header-box .header .guide {
+  float: right;
+  width: 90px;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 16px;
+  padding-top: 50px;
+  padding-left: 6px;
+}
+.header-box .header .guide span {
+  cursor: pointer;
+}
+.header-box .header .language {
+  float: right;
+  width: 90px;
+  font-size: 16px;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+.header-box .header .language .xiala-div {
+  width: 100%;
+  height: 90px;
+  line-height: 16px;
+  padding-top: 50px;
+  cursor: pointer;
+}
+.header-box .header .language .xiala-list {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 90px;
+  left: 0;
+  display: none;
+  z-index: 1000;
+}
+.header-box .header .language .xiala-list li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #333333;
+  cursor: pointer;
+}
+.header-box .header .language .xiala-list li:nth-of-type(2n) {
+  background: #4a4848;
+}
+.main-box {
+  width: 100%;
+  height: 1040px;
+  margin-top: 90px;
+  position: relative;
+  overflow: hidden;
+  background: url(../img/main-bg.png);
+}
+.main-box .main-content-box {
+  width: 100%;
+  height: 1040px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.main-box .main-content-box .main-content {
+  width: 100%;
+  max-width: 1300px;
+  height: 1040px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.main-box .main-content-box .main-content .main-touzi {
+  width: 576px;
+  height: 184px;
+  margin: 0 auto;
+  margin-top: 73px;
+  background: url(../img/main-content-bg.png);
+  background-size: 100% 100%;
+  padding: 34px 0;
+  padding-left: 16px;
+  padding-right: 4px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-touzi ul {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-touzi ul li {
+  width: 100px;
+  height: 100px;
+  margin: 0 42px;
+  float: left;
+}
+.main-box .main-content-box .main-content .main-touzi ul li img {
+  width: 91px;
+  height: 91px;
+  margin: 4px auto;
+}
+.main-box .main-content-box .main-content .main-form {
+  width: 750px;
+  height: 724px;
+  background: #4a4848;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.main-box .main-content-box .main-content .main-form .sort {
+  width: 100%;
+  height: auto;
+}
+.main-box .main-content-box .main-content .main-form .sort .sort-title {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 10px;
+  line-height: 40px;
+  text-align: center;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list {
+  width: 684px;
+  height: 68px;
+  background: #3f3e3e;
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  height: 68px;
+  line-height: 68px;
+  cursor: pointer;
+  position: relative;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul li span {
+  color: white;
+  font-size: 20px;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul li i {
+  position: absolute;
+  font-size: 14px;
+  color: #999999;
+  font-style: normal;
+  line-height: 14px;
+  left: 16px;
+  top: 8px;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul li b {
+  position: absolute;
+  width: 2px;
+  height: 56px;
+  right: -2px;
+  top: 6px;
+  background: #2f2f2f;
+  display: block;
+  border-radius: 1px;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul .activeLi {
+  background: #2f2f2f;
+}
+.main-box .main-content-box .main-content .main-form .sort1 .sort1-list ul .activeLi b {
+  right: 0px;
+}
+.main-box .main-content-box .main-content .main-form .sort2 {
+  width: 684px;
+  height: auto;
+  margin: 0 auto;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list {
+  width: 100%;
+  height: 94px;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul {
+  width: 100%;
+  height: 42px;
+  background: #3f3e3e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul li {
+  width: 14.28%;
+  height: 42px;
+  line-height: 42px;
+  float: left;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul li span {
+  color: white;
+  font-size: 16px;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul li b {
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  right: -2px;
+  top: 6px;
+  background: #2f2f2f;
+  border-radius: 1px;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul .activeLi {
+  background: #2f2f2f;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul .activeLi b {
+  right: 0px;
+}
+.main-box .main-content-box .main-content .main-form .sort2 .sort2-list ul:first-child {
+  margin-bottom: 10px;
+}
+.main-box .main-content-box .main-content .main-form .sort3 {
+  width: 684px;
+  height: auto;
+  margin: 0 auto;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list {
+  width: 100%;
+  height: 60px;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul {
+  width: 100%;
+  height: 60px;
+  background: #3f3e3e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul li {
+  width: 14.28%;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul li span {
+  color: white;
+  font-size: 16px;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul li b {
+  position: absolute;
+  width: 2px;
+  height: 48px;
+  right: -2px;
+  top: 6px;
+  background: #2f2f2f;
+  border-radius: 1px;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul .activeLi {
+  background: #2f2f2f;
+}
+.main-box .main-content-box .main-content .main-form .sort3 .sort3-list ul .activeLi b {
+  right: 0px;
+}
+.main-box .main-content-box .main-content .main-form .myNum {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+.main-box .main-content-box .main-content .main-form .myNum .title {
+  width: 100%;
+  height: 16px;
+  margin-top: 24px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .allNum {
+  width: 100%;
+  height: 14px;
+  font-size: 14px;
+  color: #ffdb2e;
+  opacity: 0.99;
+  margin-top: 10px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .rang-box {
+  width: 684px;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .rang-box .numList {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .myNum .rang-box .numList p {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.main-box .main-content-box .main-content .main-form .myNum .rang-box .numList p:first-child {
+  text-align: left;
+}
+.main-box .main-content-box .main-content .main-form .myNum .rang-box .numList p:last-child {
+  text-align: right;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box .enterNum {
+  width: 50%;
+  float: left;
+  height: 80px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box .enterNum .title {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  color: #999999;
+  font-size: 14px;
+  margin: 0;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box .enterNum .content {
+  width: 294px;
+  height: 48px;
+  background: #3f3e3e;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box .enterNum .content img {
+  position: absolute;
+  display: block;
+  left: 12px;
+  width: 19px;
+  height: 26px;
+  top: 11px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .enterNum-box .enterNum .content input {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.main-box .main-content-box .main-content .main-form .myNum .form-btn {
+  width: 348px;
+  height: 72px;
+  background: #e1c231;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 40px;
+  cursor: pointer;
+  line-height: 72px;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+}
+.main-box .main-bg {
+  width: 2186px;
+  height: 2186px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1093px;
+  top: -573px;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  /* 标准的语法 */
+}
+.mark-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  opacity: 1;
+  z-index: 10000;
+  right: 0;
+  opacity: 0.6;
+}
+.guide-box {
+  display: none;
+  position: absolute;
+  width: 503px;
+  height: auto;
+  background: #4a4848;
+  border-radius: 10px;
+  top: 128px;
+  left: 50%;
+  margin-left: -277.5px;
+  overflow: hidden;
+  z-index: 10001;
+  padding-bottom: 60px;
+}
+.guide-box .title {
+  width: 100%;
+  height: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: white;
+}
+.guide-box .borde {
+  width: 80px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.guide-box .content-text {
+  padding-top: 26px;
+  width: 458px;
+  height: auto;
+  font-size: 20px;
+  color: #cccccc;
+  line-height: 36px;
+  margin: 0 auto;
+}
+.guide-box .content-text p {
+  padding: 4px 0;
+}
+.guide-box .content-text p a {
+  color: #00B4FF;
+  text-decoration: underline;
+}
+.guide-box .close-btn {
+  width: 28px;
+  height: 28px;
+  background: url(../img/guide-close.png);
+  background-size: 100% 100%;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+.toast {
+  width: 420px;
+  height: 80px;
+  background: #333333;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 80px;
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  margin-left: -210px;
+  color: white;
+  padding-left: 30px;
+  z-index: 9999;
+  display: none;
+}
+.toast img {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 27px;
+  width: 28p;
+  height: 29px;
+  cursor: pointer;
+}

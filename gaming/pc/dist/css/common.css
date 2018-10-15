@@ -1,0 +1,72 @@
+/* 初始化 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+img,
+span,
+strong,
+b,
+em,
+i,
+a,
+button,
+input,
+textarea,
+header,
+section,
+video,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #333;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+button {
+  outline: none;
+}
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+li {
+  list-style: none;
+  vertical-align: top;
+}
+input {
+  border: 0;
+  background: none;
+  outline: none;
+}
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0;
+}
