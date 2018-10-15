@@ -2,15 +2,16 @@ $(function() {
 	/*滑块*/
 	var selector = '[data-rangeslider]';
 	var $inputRange = $(selector);
+
 	function valueOutput(element) {
 		element.min = 0.1,
-		element.max = 200,
-		$('.minNum').text(element.min);
+			element.max = 200,
+			$('.minNum').text(element.min);
 		$('.maxNum').text(element.max);
 		$('.selectNum').text(element.value);
 		$('.enterNumVal').val(element.value);
-		var size=parseInt($(".activeLi").attr('size'));
-		$(".getNumVal").val(  (element.value*size).toFixed(4));
+		var size = parseInt($(".activeLi").attr('size'));
+		$(".getNumVal").val((element.value * size).toFixed(4));
 	}
 	valueOutput($inputRange[0]);
 	$(document).on('input', selector, function(e) {
@@ -22,21 +23,21 @@ $(function() {
 	$(".xiala-div").click(function() {
 		$(this).siblings(".xiala-list").slideToggle("fast");
 	})
-	$(".xiala-list").on('click','li',function() {
+	$(".xiala-list").on('click', 'li', function() {
 		$(this).parents(".xiala-list").siblings(".xiala-div").text($(this).text());
 		$(this).parents(".xiala-list").slideToggle("fast");
-		if($(this).index()==1){
+		if($(this).index() == 1) {
 			language('english')
-		}else{
+		} else {
 			language('chinses')
 		}
 	})
 	$(".main-form li").click(function() {
 		$(".main-form li").removeClass("activeLi");
 		$(this).addClass("activeLi");
-		var size=parseInt($(".activeLi").attr('size'));
-		$(".getNumVal").val(($inputRange[0].value*size).toFixed(4));
-	})	
+		var size = parseInt($(".activeLi").attr('size'));
+		$(".getNumVal").val(($inputRange[0].value * size).toFixed(4));
+	})
 	/*弹窗*/
 	$(".guide").click(function() {
 		$(".guide-box").show();
@@ -56,52 +57,52 @@ $(function() {
 		this.value = this.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
 		this.value = this.value.replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3'); //只能输入两个小数  
 	}
-	$(".enterNumVal").blur(function(){
-		var valNum=parseFloat($(this).val()).toFixed(4);
-		if(valNum<$inputRange[0].min){
-			valNum=$inputRange[0].min;
+	$(".enterNumVal").blur(function() {
+		var valNum = parseFloat($(this).val()).toFixed(4);
+		if(valNum < $inputRange[0].min) {
+			valNum = $inputRange[0].min;
 		}
-		if(valNum>$inputRange[0].max){
-			valNum=$inputRange[0].max;
+		if(valNum > $inputRange[0].max) {
+			valNum = $inputRange[0].max;
 		}
 		$(".enterNumVal").val(valNum)
 		$inputRange.val(valNum).change();
 		console.log($inputRange[0].value);
-		
+
 	})
 	/*index_hy*/
-	$('#allBet').on('click', function () {
-        $('#allBet-ul').show()
-        $('#perBet-ul').hide()
-        $('#moveLine').addClass('goLeft')
-        $('#moveLine').removeClass('goRight')
-    })
+	$('#allBet').on('click', function() {
+		$('#allBet-ul').show()
+		$('#perBet-ul').hide()
+		$('#moveLine').addClass('goLeft')
+		$('#moveLine').removeClass('goRight')
+	})
 
-    $('#perBet').on('click', function () {
-        $('#perBet-ul').show()
-        $('#allBet-ul').hide()
-        $('#moveLine').addClass('goRight')
-        $('#moveLine').removeClass('goLeft')
-    })
-    
-    /*toast*/
-   	$(".toast img").click(function(){
-   		$('.toast').hide();
-   	})
-	
+	$('#perBet').on('click', function() {
+		$('#perBet-ul').show()
+		$('#allBet-ul').hide()
+		$('#moveLine').addClass('goRight')
+		$('#moveLine').removeClass('goLeft')
+	})
+
+	/*toast*/
+	$(".toast img").click(function() {
+		$('.toast').hide();
+	})
+
 	/*语言切换*/
-	function language(type){
-		
-		if(type=="english"){
-			activeData=englishData
-		}else{
-			activeData=chineseData
+	function language(type) {
+
+		if(type == "english") {
+			activeData = englishData
+		} else {
+			activeData = chineseData
 		}
 		console.log(activeData)
 		$(".language .xiala-div").text(activeData.headTitle.languageActive);
-		var languageListStr='';
-		activeData.headTitle.languageList.forEach(function(x,i){
-			languageListStr +='<li>'+x+'</li>';
+		var languageListStr = '';
+		activeData.headTitle.languageList.forEach(function(x, i) {
+			languageListStr += '<li>' + x + '</li>';
 		})
 		$('.language .xiala-list').html(languageListStr);
 		$('.guide span').text(activeData.headTitle.headTitle02);
@@ -124,19 +125,50 @@ $(function() {
 		$('.allBet-list-head span').eq(0).text(activeData.betDataList.betCurrency);
 		$('.allBet-list-head span').eq(0).text(activeData.betDataList.betEvent);
 		$('.allBet-list-head span').eq(0).text(activeData.betDataList.betBonus);
-		
+
 		$(".guide-box .title").text(activeData.guideTitle);
-		
-		
-		var guideListStr=''
-		activeData.guide.forEach(function(x,i){
-			x=x.replace("(a1)","<a>")
-			x=x.replace("(/a1)","</a>")
-			x=x.replace("(a2)","<a>")
-			x=x.replace("(/a2)","</a>")
-			guideListStr+='<p>'+x+'</p>'
+
+		var guideListStr = ''
+		activeData.guide.forEach(function(x, i) {
+			x = x.replace("(a1)", "<a>")
+			x = x.replace("(/a1)", "</a>")
+			x = x.replace("(a2)", "<a>")
+			x = x.replace("(/a2)", "</a>")
+			guideListStr += '<p>' + x + '</p>'
 		})
 		$('.guide-box .content-text').html(guideListStr);
 	}
 	language('chinese');
+
+	/*旋转效果*/
+	function rotate(className, timeNum, endNum) {
+		var topNum = 0;
+		var timer = setInterval(function() {
+			if(timeNum > 0) {
+				timeNum -= 1;
+				if(topNum <= -300) {
+					topNum = 0
+				} else {
+					topNum -= 100;
+				}
+				$('.' + className).css({
+					background: "url(dist/img/dice_active.png) no-repeat",
+					backgroundPosition: '0 ' + topNum + "px",
+				})
+			} else {
+				$('.' + className).css({
+					background: "url(dist/img/dice_" + endNum + ".png) no-repeat",
+					backgroundPosition: 'center center',
+				})
+				clearInterval(timer);
+			}
+
+		}, 60)
+
+	}
+	$(".form-btn").click(function() {
+		rotate('touzi1', 70, 3)
+		rotate('touzi2', 80, 4)
+		rotate('touzi3', 90, 5)
+	})
 })

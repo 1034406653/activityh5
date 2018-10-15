@@ -138,10 +138,11 @@
   margin: 0 42px;
   float: left;
 }
-.main-box .main-content-box .main-content .main-touzi ul li img {
-  width: 91px;
-  height: 91px;
-  margin: 4px auto;
+.main-box .main-content-box .main-content .main-touzi ul li .pic {
+  width: 100px;
+  height: 100px;
+  background: url(../img/dice_6.png) no-repeat;
+  background-position: center center;
 }
 .main-box .main-content-box .main-content .main-form {
   width: 750px;
